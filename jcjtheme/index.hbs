@@ -1,0 +1,29 @@
+{{!< default}}
+{{> header}}
+<main class="main_jcj" role="main">
+{{#foreach posts}}
+<article class="article_jcj" role="article" itemscope itemtype="http://schema.org/Article">
+<time class="date_jcj" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time><br/>
+<time class="date_jcj" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd'}}</time>
+<div class="thispost">
+<header class="postheader_jcj">
+<h1 class="posttitle_jcj" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+</header>
+<div class="postcontent_jcj" itemprop="articleBody">
+{{content}}
+</div>
+{{#if tags}}
+<div class="posttags_jcj">
+Tags: {{tags separator=" | "}}
+</div>
+{{/if}}
+</div>
+</article>
+{{/foreach}}
+{{#if pagination}}
+<div class="pagination_jcj">
+{{{pagination}}}
+</div>
+{{/if}}
+</main>
+{{> footer}}

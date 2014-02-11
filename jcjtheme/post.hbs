@@ -1,0 +1,50 @@
+{{!< default}}
+{{> header}}
+<main class="main_jcj" role="main">
+{{#post}}
+<article class="article_jcj" role="article" itemscope itemtype="http://schema.org/Article">
+<div class="thispost">
+<time class="date_jcj" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+<header class="postheader_jcj">
+<h1 class="posttitle_jcj" itemprop="headline">{{title}}</h1>
+</header>
+<div class="postcontent_jcj" itemprop="articleBody">
+{{content}}
+</div>
+{{#if tags}}
+<div class="posttags_jcj">
+Tags: {{tags separator=" | "}}
+</div>
+{{/if}}
+	<div class="sharepost_jcj">
+	<h4 class="share_jcj">Share this post: &nbsp;</h4>
+	<a class="share_jcj icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_jcj">Twitter</span></a>
+	<a class="share_jcj icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_jcj">Facebook</span></a>
+	<a class="share_jcj icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_jcj">Google+</span></a>
+	</div>
+		{{#if author}}
+		<footer class="postfooter_jcj">
+		<address itemscope itemtype="http://schema.org/Person">
+		{{#if author.image}}
+		<div class="authorimage_jcj"><img src="{{author.image}}" itemprop="image" /></div>
+		{{/if}}
+		<h4 class="authorname_jcj"><span itemprop="author">{{author.name}}</span></h4>
+		{{#if author.website}}
+		<div class="authorwebsite_jcj"><a href="{{author.website}}" itemprop="url">{{author.website}}</a></div>
+		{{/if}}
+		</address>
+		<div class="authorbio_jcj">
+		<p>{{author.bio}}</p>
+		</div>
+		</footer>
+		{{/if}}
+</div>
+</article>
+{{/post}}
+{{#if pagination}}
+<div class="pagination_jcj">
+{{{pagination}}}
+</div>
+{{/if}}
+</main>
+{{> footer}}
