@@ -446,18 +446,30 @@ h1.posttitle_jcj {
 h1.posttitle_jcj a,
 h1.posttitle_jcj a:link,
 h1.posttitle_jcj a:visited {
-  color: skyblue;
+  color: white;
   text-decoration: none;
 }
 h1.posttitle_jcj a:hover,
 h1.posttitle_jcj a:focus {
-  color: lightblue;
+  color: darkblue;
+}
+
+.date_jcj, .date_jcj{
+  display:inline;
 }
 
 .date_jcj {
   font-size: 2rem;
-
+font-weight:bold;
 }
+.date_jcj1 {
+  font-size: 1.4rem;
+}
+.date_jcj2 {
+  font-size: 1rem;
+font-weight:bold;
+}
+
 .date_jcj:before {
 
 }
@@ -546,7 +558,7 @@ hr {
   margin-bottom: 2em;
 }
 .postheader_jcj {
-	
+  background-color:skyblue;	
 }
 .postheader_jcj:before {
 
@@ -561,6 +573,7 @@ hr {
 	border: 0.18rem dashed skyblue;
 	border-radius: 2em 2em 2em 2em;
 	padding:2em;
+	margin:3em;
 	background-color: rgba(135, 206, 235, 0.1);
 
 }
@@ -586,6 +599,7 @@ hr {
   color: white;
   margin: 2.0225em 0;
   background-color:skyblue;
+  text-align:center;
   
 }
 .footer_jcj a,
@@ -602,7 +616,6 @@ hr {
 .pagination_jcj {
   background-color: white;
   color: #4f5154;
-  border: 0.063rem solid skyblue;
   text-align: center;
   padding: 0.809em 1.618em;
 }
@@ -700,6 +713,7 @@ h4.authorname_jcj {
   h1.blogtitle_jcj,
   h1.blogtitle_jcj a {
     font-size: 3rem;
+	color:white;
   }
   h2.blogdescription_jcj,
   h2.blogdescription_jcj a {
@@ -708,6 +722,7 @@ h4.authorname_jcj {
   }
 
   h1.posttitle_jcj {
-    font-size: 2.25em;
+    font-size: 2.5em;
+	color: white;
   }
 
